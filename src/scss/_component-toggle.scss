@@ -1,0 +1,43 @@
+.c-toggle {
+  display: flex;
+  justify-content: center;
+  color:$color-dark;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  &__txt{
+    margin-top: .1rem;
+    margin-right: 1rem;
+    color:$color-light;
+  }
+  &__switch {
+    width: 2.5rem;
+    height: 1.5rem;
+    border-radius: 1rem;
+    background-color: $color-accent;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left:.3rem;
+    position: relative;
+    transition: all .3s ;
+    &::after{
+        content:"";
+        background-color: $color-dark;
+        width: 1rem;
+        height: 1rem;
+        position: absolute;
+        top: 0.25rem;
+        left: 0.25rem;
+        border-radius: 50%;
+        transition: all .3s ;
+    }
+  }
+  &__checkbox{
+    display: none;
+    &:checked + .c-toggle__switch{
+        background-color: $color-accent;
+        &::after{
+            margin-left:1rem;
+        }
+    }
+  }
+}

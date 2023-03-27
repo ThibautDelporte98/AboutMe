@@ -1,0 +1,121 @@
+.c-testimonials {
+  &__cell {
+    position: relative;
+    width: 50rem;
+    height: 20rem;
+    margin-right: 10px;
+    background: $color-bg-comp;
+    margin-right: 3rem;
+    margin-top: 7rem !important;
+    margin-bottom: 3rem!important;
+    @include media-breakpoint-down("md"){
+      width: 30rem;
+      height: 25rem;
+    }
+    @include media-breakpoint-down("sm"){
+      width: 20rem;
+      height: 30rem;
+    }
+    &::before {
+      display: block;
+      text-align: center;
+      line-height: 200px;
+      font-size: 80px;
+      color: white;
+    }
+  }
+  &__img {
+    position: absolute;
+    bottom: 15.2rem;
+    left: 40%;
+    height: 10rem;
+    border-radius: 50%;
+    @include media-breakpoint-down("md"){
+      top: -5rem;
+      left: 35%;
+    }
+    @include media-breakpoint-down("sm"){
+      top: -5rem;
+      left: 25%;
+    }
+  }
+  &__name{
+    display: flex;
+    justify-content: center;
+    margin-top: 6rem;
+    color: $color-accent-dark;
+    font-size: 1rem;
+    font-weight: $fw-medium; 
+    @include media-breakpoint-down("md"){
+      margin-top: 7rem;
+    }
+  }
+  &__company{
+    display: flex;
+    justify-content: center;
+    font-size: .65rem;
+    color: $color-white;
+  }
+  &__qoute{
+    padding-top:2rem;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 75%;
+    font-size: 0.75rem;
+    color: $color-white;
+    font-weight: $fw-light;
+    @include media-breakpoint-down("md"){
+      padding-top: 3rem;
+    }
+  }
+  &__q1{
+    position: absolute;
+    bottom: 9.2rem;
+    left: 5rem;
+    @include media-breakpoint-down("md"){
+      bottom: 12rem;
+      left: 2rem;
+    }
+    @include media-breakpoint-down("sm"){
+      top: 10rem;
+      left: 2rem;
+    }
+    
+    
+  }
+  &__q2{
+    position: absolute;
+    bottom: 1.8rem;
+    right: 15rem;
+    rotate:(170deg);
+    @include media-breakpoint-down("md"){
+      bottom: 1rem;
+      right: 2rem;
+    }
+
+  }
+}
+
+// overschrijven van de css classes flickity.
+
+.flickity-prev-next-button.next {
+  display: none;
+}
+
+.flickity-prev-next-button.previous {
+  display: none;
+}
+.flickity-page-dots .dot {
+  display: inline-block;
+  width: 40px !important;
+  height: 10px;
+  margin: 0 8px;
+  border-radius: 10px !important;
+  opacity: 1 !important;
+  cursor: pointer;
+  background: $color-carousel-nav !important;
+  &.is-selected {
+    background: $color-accent !important;
+  }
+}

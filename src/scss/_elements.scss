@@ -1,0 +1,61 @@
+@import "settings";
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Poppins", Arial, Helvetica, sans-serif;
+    font-weight: $fw-light;
+    font-size: 1rem;
+    background-color: $color-dark;
+    overflow-x: hidden;
+}
+.c-nav {
+    text-decoration: none;
+    a {
+        text-decoration: none;
+    }
+}
+.c-topic{
+    margin-top:5rem;
+    &__title{
+        color: $color-light;
+    }
+    &__text{
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+        font-size: .75rem;
+        color: $color-light;
+    }
+    &__line{
+        margin-bottom: 1rem;
+    }
+}
+
+p{
+    color: $color-white;
+}
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+  xxxl: 1920px
+);
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1320px,
+  xxxl: 1450px
+);
+
+
+

@@ -1,0 +1,116 @@
+.c-services {
+  margin-top: 2rem;
+  &__content {
+    display: flex;
+    flex-direction: row;
+    background-color: $color-bg-comp;
+    padding: 1rem;
+    border-radius: 0.3125rem;
+    text-decoration: none;
+    &:hover {
+      background-color: $color-accent-hover;
+      .c-services__content--icon {
+        background-color: $color-light;
+        fill: $color-dark;
+      }
+      .c-services__content--svg {
+        background-color: $color-light;
+        fill: black;
+      }
+      .c-services__content--details {
+        fill: black;
+      }
+    }
+    &--icon {
+      background-color: $color-dark;
+      border-radius: 50%;
+      width: 3rem;
+      height: 3rem;
+      padding: 0.7rem;
+      fill: $color-light;
+    }
+    &--svg {
+      fill: black;
+    }
+    &--subject {
+      margin-top: auto;
+      margin-bottom: auto;
+      margin-left: 1rem;
+      font-size: 1rem;
+      width: auto;
+    }
+    &--details {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: auto;
+      margin-bottom: auto;
+      margin-left: auto;
+      fill: $color-accent;
+    }
+  }
+  &__button {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.c-stats {
+  margin-top: 5rem;
+  background: url("../img/servicesbg.jpg") no-repeat;
+  height: 22.5rem;
+  border-top: 1rem solid #000;
+  border-bottom: 1rem solid #000;
+  @include media-breakpoint-down("lg") {
+    height: 30rem;
+    background: none;
+    border: none;
+  }
+  @include media-breakpoint-down("sm") {
+    height: 65rem;
+    background: none;
+  }
+  &__item {
+    margin-top: 5.5rem;
+    @include media-breakpoint-only("md") {
+      margin-top: 5rem;
+      display: flex;
+      justify-content: center;
+    }
+    @include media-breakpoint-only("sm") {
+      display: flex;
+      justify-content: center;
+    }
+    @include media-breakpoint-only("xs") {
+      display: flex;
+      justify-content: center;
+    }
+  }
+  &__statistic {
+    margin-top: auto;
+    margin-bottom: auto;
+    background-color: $color-bg-comp;
+    width: 13rem;
+    height: 10rem;
+    border-radius: 5px;
+    border: 0.125rem dashed #707070;
+    stroke-width: 2rem;
+    stroke-dasharray: 5 100;
+    &:hover {
+      background-color: $color-accent-hover;
+      border: 0.125rem dashed $color-accent-hover;
+    }
+    &--amount {
+      display: flex;
+      justify-content: center;
+      margin-top: 25%;
+      margin-bottom: auto;
+      color: $color-white;
+      font-weight: bold;
+    }
+    &--subject {
+      display: flex;
+      justify-content: center;
+      color: $color-white;
+    }
+  }
+}

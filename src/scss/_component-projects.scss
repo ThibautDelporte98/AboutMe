@@ -1,0 +1,140 @@
+.c-projects {
+  padding-top: 2rem;
+  &__content{
+    position: relative;
+  }
+  &__filter {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+  }
+  &__type {
+    margin-right: 2rem;
+    color: $color-light;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    &:hover {
+      color: $color-accent;
+    }
+  }
+  &__items {
+    margin-top: 1rem;
+  }
+  &__img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: .4688rem;
+    filter: grayscale(100%);
+    &:hover{
+        box-shadow: 0 0 0 200px rgba(39, 84,152,0.9) inset;
+    }
+  }
+  &__button {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+}
+
+//Overlay content
+
+
+.c-overlay{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: $color-accent;
+    border-radius: .4688rem;
+    text-align: center;
+    
+    &:hover{
+        opacity: .95;
+    }
+    &__title{
+        font-size: 1rem;
+        color: $color-white;
+        font-weight: $fw-bold;
+        width: 70%;
+    }
+    &__subtitle{
+        font-size: 0.6rem;
+        color: $color-white;
+        font-weight: $fw-light;
+        width: 70%;
+    }
+    &__text{
+        font-size: .6rem;
+        color: $color-white;
+        font-weight: $fw-light;
+        width: 70%;
+        padding-top: 1.5rem;
+    }
+    &__arrow{
+        margin-top: 1rem;
+        fill: $color-light;
+    }
+
+}
+
+// bootstrap classes overschrijven
+
+.nav-tabs .nav-link.active,
+.nav-tabs .nav-item.show .nav-link {
+  border: none;
+  background-color: unset;
+  &:hover {
+    border: none;
+  }
+}
+
+.nav-tabs {
+  border: none;
+  &:hover {
+    border: none;
+  }
+}
+
+.nav-link {
+  border: none;
+  &:hover {
+    border: none;
+  }
+  &:focus {
+    border: none;
+  }
+  &:focus-visible {
+    border: none;
+  }
+}
+
+.nav-link.active {
+  color: $color-accent;
+  font-weight: 600;
+  margin-right: 2rem;
+  text-decoration: none;
+}
+.nav-tabs .nav-link {
+  border: none;
+}
+
+.nav-tabs .nav-link.active {
+  //color: unset !important;
+  color: $color-accent;
+  font-weight: 600;
+  margin-right: 2rem;
+  text-decoration: none;
+  color: $color-accent;
+  font-weight: 600;
+  margin-right: 2rem;
+  text-decoration: none;
+}

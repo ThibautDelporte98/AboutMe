@@ -1,0 +1,74 @@
+:root{
+    --color-dark: #09090B;
+    --color-dark-light: #111111;
+    --color-light: white;
+    --color-bar: #707070;
+    --color-accent: #FF4900;
+    --color-accent-dark: #FF4900;
+    --color-accent-light: #FF4900;
+    --color-white: #ffffff;
+    --color-bg-comp: #111111;
+    --color-carousel-nav:#8C8CA5;
+    --input-border-color: #333333;
+    --label-text-color: #707070;
+    --form-label-color:#000000;
+    --color-base--light: #e6e6e6;
+    --color-accent-hover:#FF4900;
+    --background-image:url("../img/header-img3.png")no-repeat;
+    
+}
+
+$cyan: #FF4900;
+$dark: #FFFFFF;
+$borderW: 2px;
+
+.o-darkmode{
+    --color-dark: white;
+    --color-dark-light:#ffffff;
+    --color-light: black;
+    --color-base--light: #363636;
+    --color-bg-comp: #FF4900;
+    --form-label-color:white;
+    --color-accent-hover:#111111;
+    --color-accent-dark: black;
+    --color-accent-light: white;
+    --background-image:none;
+}
+
+$color-dark: var(--color-dark);
+$color-dark-light: var(--color-dark-light);
+$color-light: var(--color-light);
+$color-accent: var(--color-accent);
+$color-bar: var(--color-highlight);
+$color-white: var(--color-white);
+$color-dark-rgb: var(--color-dark-rgb);
+$color-carousel-nav:var(--color-carousel-nav);
+$color-bg-comp:var(--color-bg-comp);
+$input-border-color: var(--input-border-color);
+$form-label-color: var(--form-label-color);
+$label-text-color: var(--label-text-color);
+$color-base--light: var(--color-base--light);
+$color-accent-hover: var(--color-accent-hover);
+$color-accent-dark: var(--color-accent-dark);
+$color-accent-light: var(--color-accent-light);
+$background-image: var(--background-image);
+
+$fw-light: 300;
+$fw-regular: 400;
+$fw-medium: 600;
+$fw-bold: 700;
+
+$borderW: 2px;
+$numOfBlobs: 3;
+
+$percentages: (
+    85: 1.4s,
+    35: 1s,
+    50: 1.2s,
+    40: 1s,
+    80: 0.4s,
+    75: 0.6s,
+    70: 0.8s,
+    55: 0.4s,
+  );
+

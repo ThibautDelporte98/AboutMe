@@ -1,0 +1,146 @@
+.c-about{
+    margin-top: 12.5rem;
+    background-color: $color-dark;
+    padding: 2.5rem;
+    border-radius: 10px;
+    &__img{
+      position: relative;
+        &--B{
+        display: block;
+        width: 100%;
+        height: 30rem;
+        border-radius: 0.625rem;
+        object-fit: cover;
+        filter: grayscale(100%);
+    }&--T{
+            position: absolute;
+            left: -2em;
+            bottom: -2rem;
+            width: 9.375rem;
+            height: auto;  
+            @include media-breakpoint-down('md'){
+              left: 0;
+              bottom: 0;
+            }
+
+        }
+    }
+
+    &__title{
+      color: $color-light;
+      font-size: 1.75rem;
+      font-weight: 600;
+      max-width: 70%;
+  
+    }
+    &__txt{
+      font-size: .75rem;
+      color: $color-light;
+    }
+    &__right{
+      @include media-breakpoint-down("lg"){
+        margin-top: 3rem;
+      }
+    }
+    &__bar{
+      height: 0.4rem;
+      background-color: rgba($color-bar, 0.2);
+      margin: 1.5rem auto;
+      position: relative;
+      width: 10rem;
+    }
+      &__percentage {
+      font-size: 1.8rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+    &__bar {
+      height: 0.3rem;
+      background-color: rgba(white, 0.2);
+      margin: 1.5rem auto;
+      position: relative;
+      &::after {
+        content: "";
+        background-color: $color-accent;
+        width: 0;
+        height: 0.3rem;
+        position: absolute;
+      }
+    }
+  }
+  
+  // GRAFIEK
+  
+  .c-categories {
+    &__subject {
+      font-size: .7rem;
+      font-weight: $fw-medium;
+      margin-bottom: 0;
+      text-transform: uppercase;
+      color: $color-light;
+    }
+    &__bar {
+      height: 0.3rem;
+      background-color: rgba(white, 0.2);
+      margin: .5rem 0 1.5rem 0;
+      position: relative;
+      &::after {
+        content: "";
+        background-color: $color-accent;
+        width: 0;
+        height: 0.3rem;
+        position: absolute;
+      }
+    }
+    &__button{
+      margin-top:2rem;
+    }
+    &__colorchange--75{
+      &::after {
+        background-color:#FF7004 ;
+      }
+    }
+    &__colorchange--70{
+      &::after {
+        background-color:#FF9809 ;
+      }
+    }
+    &__colorchange--75{
+      &::after {
+        background-color:#FFBF0D ;
+      }
+    }
+
+  }
+  
+  @each $percentage, $delay in $percentages {
+    .c-categories__animate{
+      .c-categories__bar--#{$percentage}::after {
+      width: ($percentage * 1%);
+      transition: width 0.3s $delay;
+    }
+    }
+
+  }
+
+// .c-colorchange{
+//     &__75{
+//         &::after {
+//             background-color:#FF7004 ;
+//           }
+        
+//     }
+//     &__85{
+//         &::after {
+//             background-color:#FF9809 ;
+//           }
+        
+//     }
+//     &__95{
+//         &::after {
+//             background-color:#FFBF0D ;
+//           }
+        
+//     }
+// }
+  

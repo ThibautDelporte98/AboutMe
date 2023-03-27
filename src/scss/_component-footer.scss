@@ -1,0 +1,12 @@
+
+.c-footer{
+    &__copyright{
+        display: flex;
+        justify-content: center;
+        color: $color-light;
+        font-size: .75rem;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+   
+}

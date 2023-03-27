@@ -1,0 +1,187 @@
+.c-nav {
+  padding-bottom: 1.5rem;
+  padding-top: 1.5rem;
+  background-color: $color-dark;
+  .row {
+    align-items: center;
+  }
+  &__link {
+    color: $color-light;
+    padding: 1rem;
+    margin-left: -1rem;
+    margin-right: -1rem;
+    &:hover {
+      color: $color-light;
+      background-color: $color-accent;
+      padding: 4rem 1rem 1rem 1rem;
+      margin: -1rem;
+      width: 100%;
+      overflow: visible;
+      @include media-breakpoint-only("md") {
+        width: 100%;
+        padding: 1rem;
+        background-color: $color-accent;
+      }
+    }
+    @include media-breakpoint-down(lg) {
+      color: $color-light;
+    }
+    @include media-breakpoint-only("md") {
+      color: $color-dark;
+    }
+    &:hover {
+      color: $color-light;
+    }
+    &--active {
+      color: $color-light;
+      &:hover {
+        color: $color-light;
+      }
+    }
+  }
+  &__list {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin-right: 0;
+    @include media-breakpoint-down(lg) {
+      transform: translateX(18rem);
+      transition: transform 0.5s ease;
+      position: fixed;
+      z-index: 0;
+      top: 0;
+      right: 0;
+      width: 18rem;
+      height: 100vh;
+      background-color: rgba($color-dark-rgb, 0.75);
+      flex-direction: column;
+      justify-content: flex-start;
+      padding: 6rem 0 0;
+      text-align: center;
+    }
+    &:first-child {
+      margin: unset;
+    }
+    &:last-child {
+      margin: unset;
+    }
+  }
+  &__item {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    font-size: 0.8rem;
+    font-weight: $fw-light;
+    text-decoration: none;
+    &--button {
+      margin-right: 0;
+      @include media-breakpoint-only("md") {
+        margin-right: 1rem;
+      }
+      @include media-breakpoint-only("sm") {
+        margin-right: 1rem;
+      }
+      @include media-breakpoint-only("xs") {
+        margin-right: 1rem;
+      }
+    }
+    &--active {
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+      box-shadow: 0 1px 5px 0.25 $color-dark;
+      transition: ease-in-out 0.2s;
+    }
+  }
+
+  &__button {
+    margin-left: 1rem;
+  }
+
+  &__bar {
+    display: block;
+    width: 2rem;
+    height: 0.2rem;
+    margin-bottom: 0.3rem;
+    background-color: $color-accent;
+    border-radius: 0.2rem;
+    z-index: 1;
+    transition: transform 0.5s ease, opacity 0.2s ease;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  &__toggle {
+    display: block;
+    position: absolute;
+    width: 2rem;
+    height: 1.5rem;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 2;
+
+    @include media-breakpoint-up(lg) {
+      display: none;
+    }
+    &:checked ~ .c-nav__bar--top {
+      transform-origin: 0;
+      transform: rotate(45deg);
+      transition: 0.5s ease;
+    }
+    &:checked ~ .c-nav__bar--bottom {
+      transform-origin: 0 100%;
+      transform: rotate(-45deg) translate(-4px, 5px);
+      transition: 0.5s ease;
+    }
+    &:checked ~ .c-nav__bar--mid {
+      // transform-origin:0 100%;
+      transform: rotate(-45deg) translate(-4px, 5px);
+      opacity: 0;
+      transition: 0.2s ease;
+    }
+    &:checked ~ .c-nav__list {
+      transform: none;
+      transition: 0.5s ease-in;
+      background-color: rgba(255, 255, 255, 0.8);
+      color: $color-dark;
+    }
+  }
+}
+
+.c-logo {
+  display: flex;
+  &__name{
+      color: white;
+      font-size: 1.5rem;
+      font-weight: $fw-medium;
+      width: 100%;
+      transition: all 0.5s ease-in-out;
+      &--subcolor{
+        color: $color-accent;  
+        font-weight: $fw-bold;
+      }
+      &:hover {
+        transform: scale(0.95);
+        transition: all 0.5s ease-in-out;
+      }
+  }
+
+}
+
+@media (min-width: 992px) {
+  .c-nav__bar {
+    display: none;
+  }
+}
+
+@media (max-width: 991px) {
+  .c-nav {
+    &__link {
+      color: $color-dark;
+    }
+    &__item {
+      padding: 1rem 0 1rem 0;
+    }
+  }
+}
