@@ -10888,21 +10888,6 @@ p {
   margin-left: -1rem;
   margin-right: -1rem;
 }
-.c-nav__link:hover {
-  color: var(--color-light);
-  background-color: var(--color-accent);
-  padding: 4rem 1rem 1rem 1rem;
-  margin: -1rem;
-  width: 100%;
-  overflow: visible;
-}
-@media (min-width: 768px) and (max-width: 991.98px) {
-  .c-nav__link:hover {
-    width: 100%;
-    padding: 1rem;
-    background-color: var(--color-accent);
-  }
-}
 @media (max-width: 991.98px) {
   .c-nav__link {
     color: var(--color-light);
@@ -10920,7 +10905,8 @@ p {
   color: var(--color-light);
 }
 .c-nav__link--active:hover {
-  color: var(--color-light);
+  color: var(--color-accent);
+  box-shadow: 0 2px 0 0 currentcolor;
 }
 .c-nav__list {
   display: flex;
@@ -11068,6 +11054,27 @@ p {
     padding: 1rem 0 1rem 0;
   }
 }
+ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+ul li {
+  margin-left: 0.75em;
+  margin-right: 0.75em;
+  transition: all 0.5s;
+}
+ul:hover {
+  transition: all 0.5s;
+}
+ul:hover a {
+  color: rgb(132, 132, 132);
+  transition: all 0.5s;
+}
+ul:hover a:hover {
+  color: var(--color-light);
+  box-shadow: 0 2px 0 0 currentcolor;
+}
+
 .c-btn {
   z-index: 1;
   position: relative;
@@ -11292,7 +11299,7 @@ a {
 .c-about__img--B {
   display: block;
   width: 100%;
-  height: 30rem;
+  height: 35rem;
   border-radius: 0.625rem;
   object-fit: cover;
   filter: grayscale(100%);
@@ -11375,12 +11382,15 @@ a {
   margin-top: 2rem;
 }
 .c-categories__colorchange--75::after {
-  background-color: #FF7004;
+  background-color: #e9ac03;
+}
+.c-categories__colorchange--75-5::after {
+  background-color: #cc9500;
 }
 .c-categories__colorchange--70::after {
-  background-color: #FF9809;
+  background-color: #d77d00;
 }
-.c-categories__colorchange--75::after {
+.c-categories__colorchange--55::after {
   background-color: #FFBF0D;
 }
 

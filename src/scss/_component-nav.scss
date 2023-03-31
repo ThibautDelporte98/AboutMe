@@ -10,19 +10,6 @@
     padding: 1rem;
     margin-left: -1rem;
     margin-right: -1rem;
-    &:hover {
-      color: $color-light;
-      background-color: $color-accent;
-      padding: 4rem 1rem 1rem 1rem;
-      margin: -1rem;
-      width: 100%;
-      overflow: visible;
-      @include media-breakpoint-only("md") {
-        width: 100%;
-        padding: 1rem;
-        background-color: $color-accent;
-      }
-    }
     @include media-breakpoint-down(lg) {
       color: $color-light;
     }
@@ -34,9 +21,10 @@
     }
     &--active {
       color: $color-light;
-      &:hover {
-        color: $color-light;
-      }
+			&:hover {
+				color: $color-accent;
+				box-shadow: 0 2px 0 0 currentcolor;
+			}
     }
   }
   &__list {
@@ -44,6 +32,15 @@
     align-items: center;
     list-style: none;
     margin-right: 0;
+    // &:hover{
+    //   a{
+    //     color: white;
+    //     &:hover{
+    //       color: $color-accent;
+    //     }       
+    //   }
+
+    // }
     @include media-breakpoint-down(lg) {
       transform: translateX(18rem);
       transition: transform 0.5s ease;
@@ -184,4 +181,26 @@
       padding: 1rem 0 1rem 0;
     }
   }
+}
+
+ul {
+	display: flex;
+	flex-wrap: wrap;
+	li {
+		margin-left: .75em;
+		margin-right: .75em;
+    transition: all .5s;
+	}
+	
+	&:hover {
+    transition: all .5s;
+		a {
+			color: rgb(132, 132, 132);
+      transition: all .5s;
+			&:hover {
+				color: $color-light;
+				box-shadow: 0 2px 0 0 currentcolor;
+			}
+		}
+	}
 }
